@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lokmanya Nagar</title>
+<SCRIPT language=JavaScript src="scripts/jquery.js" type=text/javascript></SCRIPT>
+<SCRIPT language=JavaScript src="scripts/jquery_funcs.js" type=text/javascript></SCRIPT>
+<!--<SCRIPT language=JavaScript src="scripts/validation.js" type=text/javascript></SCRIPT>-->
+<LINK href="css/stylesheet.css" type=text/css rel=stylesheet>
+<LINK href="css/menu_style.css" type=text/css rel=stylesheet>
+<!--<LINK href="newsStyleSheet.css" type=text/css rel=stylesheet>-->
+<script>
+	function validate() {
+	 var elem = document.getElementById('frmfeedback').elements;
+     for(var i = 0; i < elem.length; i++)
+     	{
+         /*alert("Name:- " + elem[i].name);
+         alert("Value:- " + elem[i].value);*/
+         
+         
+         if (elem[i].value == "") 
+        	 alert(elem[i].name + " is mandatory..");
+			 elem[i].focus();
+			 return false;
+         }
+
+	}
+	</script>
+</head>
+<body class="mbg1">
+<table width="1080" align ="center">
+        <tr>
+        	<td width="100%" border="0" cellspacing="2" cellpadding="0" bgcolor="#774F2D" >
+    			<img src="images/logo.jpg" width="290" height="64" align="left"/>
+    		</td>
+  		</tr>
+	</table>
+	
+<tr>
+</tr>
+<table width="1076" align ="center" border="0" cellspacing="3" bgcolor="#FFC58A">
+  <tr>
+    <td align="center" width="100%" cellpadding="1">
+    <img src="images/flash-image.jpg" width="700" height="115" />
+    </td>
+  </tr>
+</table>
+<table width="1080" align ="center" border="0" cellspacing="3" cellpadding="0">
+    <td align="left" valign="top" width="10%">
+       <img src='images/Sthapana.jpg' align="left">               
+    </td>
+	<TD width = "80%" valign="top"  align="center">
+    
+    <h1 class="logintext">Submit Feedback / Change Password Request</h1>
+    <form name="Feedback" method="post" id = "frmfeedback">
+    <table width="400px">
+    <tr>
+     <td colspan="2" >
+      <p style="text-align:center">Fields marked with <span class="req"> * </span> are required.</p>
+     </td>
+    </tr>
+    <tr rowspan="2"></tr>
+    <tr>
+     <td align="left">
+      <label for="Full_Name" class="username">Name<span class="req"> * </span></label>
+     </td>
+     <td valign="top" class="username">
+      <input type="text" name="Name" id="Name" maxlength="200" style="width:250px">
+     </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <label for="Email_Address" class="username">Email Id<span class="req"> * </span></label>
+      </td>
+      <td valign="top" class="username">
+        <input type="text" name="Email Id" id="email" maxlength="100" style="width:250px" >
+      </td>
+      </tr>
+    <tr>
+      <td align="left"><label for="Subject" class="username" >Subject<span class="req"> * </span></label></td>
+      <td valign="top" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select  id="subject" name="Subject">
+        <option value="Please Select" selected="selected">Please Select</option>
+        <option value="Option 1">Feedback</option>
+        <option value="Option 2">Suggestion</option>
+        <option value="Option 3">Change Password Request</option>
+        </select></td>
+      </tr>
+    <tr>
+      <td class="username" align="left">
+        <label for="Your_Message" class="username">Message<span class="req" title="required"> * </span></label>
+      </td>
+      <td valign="top" class="username">
+        <textarea style="width:250px;height:120px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+        <div>
+        <label for="Your_Message" class="copyright">Should not be more than 2000 characters</label>
+      	</div>
+      </td>
+      </tr>
+    <tr>
+     <td  colspan="2" style="text-align:center"  class="username">
+      <input type="submit" value=" Submit " align="left" onclick="validate()" ></td>
+    </tr>
+    </table>
+    </form>
+		<!--</TD>
+        <td width="10%" height="100%" border="0" cellspacing="0" cellpadding="0" valign="top">
+    		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="250" height="400" id="NewsScroller" align="center">
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="movie" value="News/NewsScrollerFree.swf" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" /><embed src="News/NewsScrollerFree.swf" quality="high" wmode="transparent" bgcolor="#ffffff" width="250" height="400" name="NewsScrollerFree" valign="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</object>
+    </td>-->
+</table>
+</td>
+   <table width="1080" align ="center" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+      <td align="center" class="copyright">©Copyright 2012 Lokmanya Nagar C.H.S Ltd., All rights reserved.<br>Site optimised for 1280x720 resolution and above.
+	</td>
+      </tr>
+     </table>
+</table>
+</body>
+</html>

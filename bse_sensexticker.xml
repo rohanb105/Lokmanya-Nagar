@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+<ModulePrefs title="BSE Sensex Stock Ticker" directory_title="BSE Sensex Stock Ticker" height="20" author="Akshay Raje" author_email="feedback@stockon.in" author_affiliation="StockOn" author_link="http://stockon.in" screenshot="http://seeon.in/gadgets/images/screenshot_bse_sensex_ticker.png" thumbnail="http://seeon.in/gadgets/images/thumbnail_bse_sensex_ticker.png" description="Live BSE Sensex Stock Ticker for your blog, website or iGoogle with an option to display BSE Sensex or BSE 100. Customizable color, font size and ticker speed. Stock quotes are updated directly from bseindia.com" render_inline="never" category="Finance">
+<Require feature="analytics"/>
+</ModulePrefs>
+<UserPref name="tickertype" display_name="Ticker Type" datatype="enum" default_value="30">
+<EnumValue value="30" display_value="BSE Sensex"/>
+<EnumValue value="21" display_value="BSE Midcap"/>
+<EnumValue value="22" display_value="BSE Smallcap"/>
+<EnumValue value="100" display_value="BSE 100"/>
+<EnumValue value="091" display_value="BSE Reality"/>
+<EnumValue value="19" display_value="BSE Auto"/>
+<EnumValue value="08" display_value="BSE Health Care"/>
+<EnumValue value="01" display_value="BSE PSU"/>
+<EnumValue value="10" display_value="BSE IT"/>
+<EnumValue value="15" display_value="BSE Power"/>
+<EnumValue value="03" display_value="BSE Bankex"/>
+<EnumValue value="04" display_value="BSE Consumer Durables"/>
+<EnumValue value="06" display_value="BSE FMCG"/>
+<EnumValue value="02" display_value="BSE Capital Goods"/>
+<EnumValue value="14" display_value="BSE Oil Gas"/>
+<EnumValue value="12" display_value="BSE Metal"/>
+</UserPref>
+<UserPref name="bgcolor" display_name="Background Color #" datatype="string" default_value="ffffff"/>
+<UserPref name="fontsize" display_name="Font Size" datatype="enum" default_value="11">
+<EnumValue value="9" display_value="Smallest"/>
+<EnumValue value="10" display_value="Small"/>
+<EnumValue value="11" display_value="Normal"/>
+<EnumValue value="12" display_value="Large"/>
+<EnumValue value="13" display_value="Largest"/>
+</UserPref>
+<UserPref name="tickerspeed" display_name="Ticker Speed" datatype="enum" default_value="2">
+<EnumValue value="1" display_value="Slowest"/>
+<EnumValue value="2" display_value="Slow"/>
+<EnumValue value="3" display_value="Normal"/>
+<EnumValue value="4" display_value="Fast"/>
+<EnumValue value="5" display_value="Fastest"/>
+</UserPref>
+<Content type="html">
+<![CDATA[
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+ <div id="ticker"></div>
+ <div id="holder" style="display:none"></div>
+ <style type="text/css">
+ .stock-down a{text-decoration: none; color:#FF0000}
+ .stock-down a:hover {font-weight:bo
+]]>
+<![CDATA[
+ld}
+ .stock-up a{text-decoration: none; color:#009900}
+ .stock-up a:hover {font-weight:bold}
+ .link a{color:#000099; text-decoration: none;}
+ .link a:hover{color:#000099; font-weight:bold}
+ </style>
+ <script type="text/javascript">
+ var content='Loading...';var tWidth='100%';var tHeight='25px';var moStop=true;var fontfamily='arial,sans-serif';var refreshinterval=30;var prefs=new _IG_Prefs();var tcolour='#'+prefs.getString("bgcolor");var font_size=prefs.getString("fontsize");var tSpeed=prefs.getString("tickerspeed");var tickertype=prefs.getString("tickertype")||30;var cps=tSpeed;var aw,mq;var fsz=font_size;var index_type='&type=sect';if(tickertype==30||tickertype==21||tickertype==22||tickertype==100)var index_type='&type=sens';if(tickertype=='03'||tickertype=='01')var index_type='&type=comp';var rootdir="http://seeon.in/gadgets/";var cps=tSpeed;var aw,mq;var fsz=font_size;function startticker(){if(document.getElementById){var tick='<div style="position:relative;width:'+tWidth+';height:'+tHeight+';overflow:hidden;background-color:'+tcolour+'"';if(moStop)tick+=' onmouseover="cps=0" onmouseout="cps=tSpeed"';tick+='><div id="mq" style="position:absolute;left:0px;top:0px;font-family:'+fontfamily+';font-size:'+fsz+'px;white-space:nowrap;"><\/div><\/div>';document.getElementById('ticker').innerHTML=tick;mq=document.getElementById("mq");mq.style.left=(parseInt(tWidth)+10)+"px";mq.innerHTML='<span id="tx">'+content+'<\/span>';aw=document.getElementById("tx").offsetWidth;lefttime=setInterval("scrollticker()",50)}}function scrollticker(){if(parseInt(mq.style.left)>(-10-aw)){mq.style.left=parseInt(mq.style.left)-cps+"px"}else{mq.style.left=parseInt(tWidth)+10+"px"}}function fetch_feed(){_IG_FetchContent('http://bseindia.com/mktlive/indiceswatch_scrip.asp?iname=BSE&sensid='+tickertype+index_type+'&alphabet=view_all',create_ticker,{refreshInterval:refreshinterval})}function refetch_feed(){_IG_FetchContent('http://bseindia.com/mktlive/indiceswatch_scrip.asp?iname=BSE&sensid='+tickertype+index_type+'&alphabet=view_all',refresh_ticker,{refreshInterval:refreshinterval})}function render_tag(percent,class_image){if((parseFloat(percent)>0)&&(class_image=="class"))return"stock-up";if((parseFloat(percent)<0)&&(class_image=="class"))return"stock-down";if((parseFloat(percent)==0)&&(class_image=="class"))return"stock-up";if((parseFloat(percent)>0)&&(class_image=="image"))return"images\/arrow_up.gif";if((parseFloat(percent)<0)&&(class_image=="image"))return"images\/arrow_down.gif";if((parseFloat(percent)==0)&&(class_image=="image"))return"images\/arrow_up.gif"}function parse_feed(responseText){$('#holder').html(responseText);trs=$('#holder table:eq(5) tr');trs_count=trs.length;date_string=responseText.match(/Last updated on (.*?)</);ticker_string="<span class=\"link\"><a href=\"http://stockon.in\" target=\"_blank\">Powered by StockOn.in</a></span>&nbsp;&nbsp;&nbsp;";ticker_string=ticker_string+"<span style=\"color:#000099\">"+date_string[1]+"</span>&nbsp;&nbsp;&nbsp;";for(i=2;i<trs_count;i++){ticker_string=ticker_string+"<span class=\""+render_tag($('#holder table:eq(5) tr:eq('+i+') td:eq(3)').text(),"class")+"\">";ticker_string=ticker_string+"<a href=\"http://stockon.in/get-quote/"+$('#holder table:eq(5) tr:eq('+i+') td:eq(0)').text()+"/\" target=\"_blank\">";ticker_string=ticker_string+" "+$('#holder table:eq(5) tr:eq('+i+') td:eq(1)').text();ticker_string=ticker_string+" "+$('#holder table:eq(5) tr:eq('+i+') td:eq(2)').text();ticker_string=ticker_string+" ("+$('#holder table:eq(5) tr:eq('+i+') td:eq(4)').text()+"%)";ticker_string=ticker_string+"</a></span>&nbsp;<img src=\""+rootdir+render_tag($('#holder table:eq(5) tr:eq('+i+') td:eq(3)').text(),"image")+"\"/ >";ticker_string=ticker_string+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}ticker_string=ticker_string+"";return ticker_string}function create_ticker(responseText){content=parse_feed(responseText);var tick='<div style="position:relative;width:'+tWidth+';height:'+tHeight+';overflow:hidden;background-color:'+tcolour+'"';if(moStop)tick+=' onmouseover="cps=0" onmouseout="cps=tSpeed"';tick+='><div id="mq" style="position:absolute;left:0px;top:0px;font-family:'+fontfamily+';font-size:'+fsz+'px;white-space:nowrap;"><\/div><\/div>';document.getElementById('ticker').innerHTML=tick;mq=document.getElementById("mq");mq.innerHTML='<span id="tx">'+content+'<\/span>';var starttick=startticker()}function refresh_ticker(responseText){content=parse_feed(responseText);mq=document.getElementById("mq");mq.innerHTML='<span id="tx">'+content+'<\/span>'}fetch_feed();window.setInterval('refetch_feed()',(refreshinterval*1000));_IG_Analytics("UA-4769395-1","/gadgets/bse_sensex_ticker.xml");
+ </script>
+]]>
+</Content>
+</Module>

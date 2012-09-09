@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<News>
+	<Item>
+		<Tittle>1 Explosion at hotel 'injures four'</Tittle>
+		<Date>January 1th, 2009</Date>
+		<Details>One person is believed to be trapped and four injured after an explosion at a hotel in Aberdeenshire. </Details>			
+		<Link>http://www.msn.com</Link>
+	</Item>		
+	<Item>
+		<Tittle>2 England captain Pietersen resigns  </Tittle>	
+		<Date>January 2th, 2009</Date>		
+		<Details>Kevin Pietersen resigns as England captain, with Andrew Strauss to replace him for West Indies tour. </Details>			
+		<Link>http://www.news.com</Link>
+	</Item>		
+	<Item>
+		<Tittle>3 Explosion at hotel 'injures four'</Tittle>
+		<Date>January 1th, 2009</Date>
+		<Details>One person is believed to be trapped and four injured after an explosion at a hotel in Aberdeenshire. </Details>			
+		<Link>http://www.google.com</Link>
+	</Item>		
+	<Item>
+		<Tittle>4 England captain Pietersen resigns  </Tittle>	
+		<Date>January 2th, 2009</Date>		
+		<Details>Kevin Pietersen resigns as England captain, with Andrew Strauss to replace him for West Indies tour. </Details>			
+		<Link>http://www.test.com/</Link>
+	</Item>	
+	<Item>
+		<Tittle>5 England captain Pietersen resigns  </Tittle>	
+		<Date>January 2th, 2009</Date>		
+		<Details>Kevin Pietersen resigns as England captain, with Andrew Strauss to replace him for West Indies tour. </Details>			
+		<Link>http://www.abc.com/</Link>
+	</Item>	
+	<Item>
+		<Tittle>6 England captain Pietersen resigns  </Tittle>	
+		<Date>January 2th, 2009</Date>		
+		<Details>Kevin Pietersen resigns as England captain, with Andrew Strauss to replace him for West Indies tour. </Details>			
+		<Link>http://www.xyz.com/</Link>
+	</Item>			
+</News>

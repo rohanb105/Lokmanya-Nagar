@@ -1,0 +1,3 @@
+AddHandler servlets .do
+AuthName "public_html"
+AuthUserFile "/home/lokmanya/.htpasswds/public_html/passwd"

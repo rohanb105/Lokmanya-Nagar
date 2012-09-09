@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<News>
+	<Item>
+		<Tittle>1. New Managing Committee</Tittle>
+		<Date>July 29th, 2012</Date>
+		<Details>New Managing Committee has been elected for next 3 years. The new committee has some fresh and ideas.</Details>	
+		<link></link>
+	</Item>
+	<Item>
+		<Tittle>2. Gokulashtami Videos</Tittle>	
+		<Date>August 25th, 2012</Date>		
+		<Details>Refresh your memories with some old and new dahihandi videos. ..Click here..</Details>
+		<link>gokulashtami.html</link>
+	</Item>	
+	<Item>
+		<Tittle>3. Ganeshotsav</Tittle>
+		<Date>Septemper 19th, 2012</Date>
+		<Details>Ganpati Bappa Moraya.. !!!</Details>	
+		<link>ganeshotsav.html</link>
+	</Item>			
+	<Item>
+		<Tittle>4. I building Lift</Tittle>
+		<Date>Septemper 19th, 2012</Date>
+		<Details>Much awaited I building lift is ready and awaiting its inaugration</Details>	
+		<link></link>
+	</Item>		
+</News>
