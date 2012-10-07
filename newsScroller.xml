@@ -1,27 +1,45 @@
 ﻿<?xml version="1.0"?>
+<?xml-stylesheet type='text/css' href='css/xml.css' ?>
 <News>
 	<Item>
-		<Tittle>1. New Managing Committee</Tittle>
-		<Date>July 29th, 2012</Date>
-		<Details>New Managing Committee has been elected for next 3 years. The new committee has some fresh and ideas.</Details>	
-		<link></link>
-	</Item>
+		<Title>Gokulashtami </Title>
+		<Date>August 12th, 2012</Date>
+		<Details>Lokmanya Mandal is organising Gokulashtami on Sunday 12th August for everybody's convinience and maximum participation.</Details>	
+		<link>intermediate.jsp?index=1</link>
+		<content>Lokmanya Mandal had organised Gokulashtami on Sunday 12th August 2012. 
+		The reponse for average as always, but everybody turned out to feast on "Dahikala".</content>
+		<index>1</index>
+	</Item>		
 	<Item>
-		<Tittle>2. Gokulashtami Videos</Tittle>	
-		<Date>August 25th, 2012</Date>		
-		<Details>Refresh your memories with some old and new dahihandi videos. ..Click here..</Details>
-		<link>gokulashtami.html</link>
+		<Title>Independence Day Celebrations  </Title>
+		<Date>August 15th, 2012</Date>		
+		<Details>As usual Independence Day will be celebrated with  a flag hoisting ceremony followed by coffee and snacks</Details>		
+		<link>intermediate.jsp?index=2</link>
+		<content>This is inside content2</content>
+		<index>2</index>
+	</Item>		
+	<Item>
+		<Title>I building Lift</Title>
+		<Date>August 15th, 2012</Date>
+		<Details>Much awaited I building lift is ready and awaiting its inaugration</Details>	
+		<link>intermediate.jsp?index=3</link>
+		<content>This is inside content3</content>
+		<index>3</index>
+	</Item>		
+	<Item>
+		<Title>New Managing Committe</Title>	
+		<Date>August 15th, 2012</Date>		
+		<Details>New Managing Committe has been elected with some fresh faces and ideas</Details>
+		<link>intermediate.jsp?index=4</link>
+		<content>This is inside content4</content>
+		<index>4</index>
 	</Item>	
 	<Item>
-		<Tittle>3. Ganeshotsav</Tittle>
-		<Date>Septemper 19th, 2012</Date>
-		<Details>Ganpati Bappa Moraya.. !!!</Details>	
-		<link>ganeshotsav.html</link>
-	</Item>			
-	<Item>
-		<Tittle>4. I building Lift</Tittle>
-		<Date>Septemper 19th, 2012</Date>
-		<Details>Much awaited I building lift is ready and awaiting its inaugration</Details>	
-		<link></link>
-	</Item>		
-</News>
+		<Title>Ganeshotsav</Title>	
+		<Date>September 19th, 2012</Date>		
+		<Details>Ganpati Bappa Moraya..</Details>
+		<link>intermediate.jsp?index=5</link>
+		<content>This is inside content5</content>
+		<index>5</index>
+	</Item>
+</News> 

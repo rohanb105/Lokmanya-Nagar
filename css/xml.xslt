@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+title {
+	font: bold 22px/24px Arial, Helvetica, sans-serif;
+	padding:19px 10px 10px 10px;
+	color:#000000;
+}
+content{
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	background-color:inherit;
+	padding:0 9px 5px 9px;
+}

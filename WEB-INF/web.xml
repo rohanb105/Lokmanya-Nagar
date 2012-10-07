@@ -27,6 +27,35 @@
     <url-pattern>/LoginServlet.do</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>NewsServlet</servlet-name>
+    <servlet-class>com.lokmanyanagar.services.NewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewsServlet</servlet-name>
+    <url-pattern>/NewsServlet.do</url-pattern>
+  </servlet-mapping>
+  
+    <!-- <servlet>
+    <servlet-name>CaptchaTest</servlet-name>
+    <servlet-class>com.lokmanyanagar.services.CaptchaTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CaptchaTest</servlet-name>
+    <url-pattern>/CaptchaTest.do</url-pattern>
+  </servlet-mapping> -->
+  
+  <error-page>
+       <location>/error.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error.jsp</location>
+  </error-page>
+ 	
+ 	<!-- <welcome-file-list>
+ 		<welcome-file>index.html</welcome-file>
+ 	</welcome-file-list> -->
   <!-- <servlet-mapping>
     <servlet-name>Test</servlet-name>
     <url-pattern>/test2</url-pattern>

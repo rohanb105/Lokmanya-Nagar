@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+
+.textheader{
+	font: bold 15px Arial, Helvetica, sans-serif;
+	padding:0 0 0 220px;
+	color:#000000;
+}
+.textheader01{
+	font: bold 13px Arial, Helvetica, sans-serif;
+	padding:0 0 0 20px;
+	color:#000000;
+}
+.textheader02{
+	font: bold 13px Arial, Helvetica, sans-serif;
+	padding:0 5px 0 20px;
+	color:#000000;
+}
+#imagepos{
+	position: absolute;
+	top: 725px;
+	left: 523px;
+	height: 148px;
+	width: 195px;
+}
+#padding01{	
+	position:absolute;
+	top: 795px;
+	left: 320px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding01{
+	padding:0 0 0 45px;
+}
+#padding02{	
+	position:absolute;
+	top: 795px;
+	left: 718px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding02{
+	padding:0 0 0 26px;
+}
+.spantext02{
+	padding:50px 0 0 0;
+}
+#padding03{	
+	position: absolute;
+	top: 890px;
+	left: 345px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding03{
+	padding:0 0 0 25px;
+}
+.spantext03{
+	padding:30px 0 0 0;
+}
+#padding04{	
+	position: absolute;
+	top: 890px;
+	left: 525px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding04{
+	padding:0 0 0 33px;
+}
+#padding05{	
+	position: absolute;
+	top: 890px;
+	left: 720px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding05{
+	padding:0 0 0 27px;
+}
+#padding06{	
+	position: absolute;
+	top: 950px;
+	left: 430px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding06{
+	padding:0 0 0 18px;
+}
+#padding07{	
+	position: absolute;
+	top: 950px;
+	left: 605px;
+	height: 37px;
+	width: 250px;
+}
+.spanpadding07{
+	padding:0 0 0 52px;
+}
+#padding08{	
+	position: absolute;
+	top: 1020px;
+	left: 408px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding08{
+	padding:0 0 0 25px;
+}
+#padding09{	
+	position: absolute;
+	top: 1020px;
+	left: 640px;
+	height: 37px;
+	width: 195px;
+}
+.spanpadding09{
+	padding:0 0 0 10px;
+}
+.spantext09{
+	padding:0 0 0 6px;
+}
+#padding10{	
+	position: absolute;
+	top: 1090px;
+	left: 403px;
+	height: 37px;
+	width: 195px;
+}
+.spantext10{
+	padding:0 0 0 21px;
+}
+
+#padding11{	
+	position: absolute;
+	top: 1090px;
+	left: 612px;
+	height: 37px;
+	width: 195px;
+}
+.spantext11{
+	padding:0 0 0 28px;
+}
+#padding12{	
+	position: absolute;
+	top: 1140px;
+	left: 307px;
+}
+#padding13{	
+	position: absolute;
+	top: 1170px;
+	left: 515px;
+	
+}
+#padding14{	
+	position: absolute;
+	top: 1210px;
+	left: 315px;
+	height: 57px;
+	width: 595px;
+}
+#padding15{	
+	position: absolute;
+	top: 1270px;
+	left: 317px;
+}
+#padding16{	
+	position: absolute;
+	top: 1300px;
+	left: 500px;
+	height: 57px;
+	width: 595px;
+}
+#padding17{	
+	position: absolute;
+	top: 1345px;
+	left: 317px;
+	height: 57px;
+	width: 595px;
+}
+#padding18{	
+	position: absolute;
+	top: 1400px;
+	left: 317px;
+}
+#padding19{	
+	position: absolute;
+	top: 1430px;
+	left: 520px;
+	height: 57px;
+	width: 595px;
+}
+#padding20{	
+	position: absolute;
+	top: 1467px;
+	left: 317px;
+	height: 57px;
+	width: 595px;
+}
+#padding21{	
+	position: absolute;
+	top: 1785px;
+	left: 370px;
+	height: 50px;
+	width: 500px;
+}
+#padding22{	
+	position: absolute;
+	top: 1530px;
+	left: 317px;
+}
+#padding23{	
+	position: absolute;
+	top: 1565px;
+	left: 505px;
+	height: 57px;
+	width: 595px;
+}
+#padding24{	
+	position: absolute;
+	top: 1600px;
+	left: 317px;
+	height: 57px;
+	width: 595px;
+}
+#padding25{	
+	position: absolute;
+	top: 1660px;
+	left: 317px;
+}
+#padding26{	
+	position: absolute;
+	top: 1680px;
+	left: 503px;
+	height: 57px;
+	width: 595px;
+}
+#padding27{	
+	position: absolute;
+	top: 1720px;
+	left: 317px;
+	height: 57px;
+	width: 595px;
+}

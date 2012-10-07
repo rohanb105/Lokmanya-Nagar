@@ -1,6 +1,6 @@
 
 .mbg1 {
-background:#fde3cc url("images/background.jpg") center center no-repeat;
+background-image: url("images/background.jpg");
 }
 /*
 html {
@@ -43,28 +43,6 @@ inherit{
 	color:#000;
 	text-decoration:underline
 }
-/*
-td, ul, p, img, form, input, select, textarea, label, a{
-	padding:0px;
-	margin:0px;
-	color: #793900;
-	}
-img{
-	border:0;
-}
-ul{
-	list-style-type:none;
-}
-a{
-	outline:none;
-}*/
-/*----------------------HEADER PART START -------------------------------*/
-/*
-.header{
-	background:url(images/header-img-one.jpg) no-repeat 343px 0;
-	height:266px; 
-	}
-*/
 .regtext{
 	font:normal 14px Arial, Helvetica, sans-serif;
 	color:#000000;
@@ -94,10 +72,7 @@ a{
 	COLOR: #000000; 
 	align:center;
 	}
-/*.width{
-	width:1080 px;
-	align:center;
-	}*/
+
 
 /*---------------------- Member login part start -------------------------------*/
 .logintext{
@@ -168,17 +143,12 @@ a{
 	position:absolute;width:100px;right:0;top:0;border:0;
 	}
 .stock{
-	font:normal 18px/10px Arial, Helvetica, sans-serif;
+	font:bold 15px/10px Arial, Helvetica, sans-serif;
 	color:#000;
 	background-color:inherit;
 	padding:5px 0 10px 0;
 }
- /*for curved edges in IE*/
-/*.temp{
-	behavior: url(PIE.htc);
-	position: relative;
-	border-radius: 12px 12px 12px 12px;
-	width:200px;
-	height:200px;
-	background:#cd0000;
-}*/
+
+#padding{
+padding:0 9px 5px 9px;
+}

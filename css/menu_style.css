@@ -19,7 +19,7 @@ body {
 	float:left;
 	display:block;
 	width:178px;
-	background:#75502f;
+	background:#7E1500;
 	/*background-image: url(menu_1.jpg);*/
 	position:relative;
 	z-index:500;
@@ -43,7 +43,7 @@ body {
     }
  
 #menunav li a:hover {
-	color:#040404;
+	color:#E7C57E;
     }
      
 #menunav a.selected {

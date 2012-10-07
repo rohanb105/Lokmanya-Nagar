@@ -1,9 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@page import="java.io.PrintWriter"%>
+<%@ page import="net.tanesha.recaptcha.*" %>
+<%@ page import="net.tanesha.recaptcha.ReCaptchaFactory" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Lokmanya Nagar</title>
+<title>The Lokmanya Co-Operative Housing Society Ltd.</title>
 <SCRIPT language=JavaScript src="scripts/jquery.js" type=text/javascript></SCRIPT>
 <SCRIPT language=JavaScript src="scripts/validation.js" type=text/javascript></SCRIPT>
 <SCRIPT language=JavaScript src="scripts/jquery_funcs.js" type=text/javascript></SCRIPT>
@@ -11,22 +13,20 @@
 <LINK href="css/menu_style.css" type=text/css rel=stylesheet>
 <!--<LINK href="newsStyleSheet.css" type=text/css rel=stylesheet>-->
 </head>
-<body class="mbg1">
-
-<table width="1080" align ="center">
-
+<body>
+	<table align ="center">
         <tr>
-        	<td width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#774F2D" >
-    			<img src="images/logo.jpg" width="290" height="64" align="left"/>
+        	<td border="0" cellspacing="0" cellpadding="0" bgcolor="#6E0000">	
+    			<img src="images/banner.png" width="1077"/>
     		</td>
   		</tr>
-	</table>&nbsp;
-<!--	<table width="1080" border="0" cellspacing="0" cellpadding="0" align="center">
+	</table>
+<table width="1080" border="0" cellspacing="0" cellpadding="0" align="center">
     	<td class="menunav">
       	<tr>
         	<td align="center" valign="top">
 			<ul id ="menunav">
-        		<li><a href="home.html" title="HOME">HOME</a></li>
+        		<li><a href="index.html" title="HOME">HOME</a></li>
         		<li><a href="#" title="FESTIVALS">FESTIVALS</a>
         	<ul>
             	<li><a href="republicday.html" title="Republic Day">Republic Day</a></li>
@@ -61,21 +61,21 @@
 		</td>
       </tr>
     </td>
-</table>&nbsp; -->
+</table>
 <tr>
 </tr>
-<table width="1080" align ="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFC58A">
+<table width="1080" align ="center" border="0">
   <tr>
-    <td align="center" width="100%" border="0" cellspacing="0" cellpadding="0" >
-    <img src="images/flash-image.jpg" width="700" height="115" />
+    <td border="0" align ="center">
+        <img src="images/flash-image.jpg" />
     </td>
   </tr>
-</table>&nbsp;
-<table width="1080" align ="center" border="0" cellspacing="0" cellpadding="0">
+</table>
+<table width="1080" align ="center" border="0" cellspacing="2" cellpadding="0">
     <td align="center" valign="top" width="10%" >
        <img src='images/Sthapana.jpg' border=0>               
     </td>
-	<TD width = "80%" valign="top">
+	<td width = "80%" valign="top">
     	<table width="100%" cellspacing="3" cellpadding="0">
 	<!--<tr>-->
          <td width = "80%" align="center">
@@ -86,10 +86,14 @@
 					if (success != null) {
 						if (success.equals("true")) {
 							%>
-							<script>alert('Registration Successful!')</script>
-						<% } else {%>
-							<script>alert('There is some problem with registration.Please try again!')</script>
+							<h2>Registration Successful!</h2>
+						<% } else {
+							if ((String) request.getParameter("captcha") != null) {%>
+								<h2>Invalid Captcha..Please enter correct captcha values!</h2>
+							<% } else {%>
+								<h2>There is some problem with registration.Please try again!</h2>
 						<% }
+						}
 					}
 				%>
     			<form action="LoginServlet.do" method="post" id = "frmMain">
@@ -134,26 +138,19 @@
     					<td class="username" align="left"><label for="firstname">Mobile No <abbr class="req" title="required">*</abbr>:</label> </td>
     					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Mobile No" id="mobNo"/></td> &nbsp;&nbsp;&nbsp;&nbsp;
     				</tr>
-    				<tr>
-    					<td colspan="3" align="center"><input type="submit" onClick = "return validate();" value="Register"/>&nbsp;&nbsp;<a href="index.html" title="home"><b>Home</b></a></td>
-    				</tr>
     			</table>
+    				<%
+         				ReCaptcha c = ReCaptchaFactory.newReCaptcha("6LfYndYSAAAAAOXdVq2RzqT06gXOlEsqfK_gnsNV", "6LfYndYSAAAAAON5osggHtDW5mwVOH0YCSrrwOgF", false);
+          				out.print(c.createRecaptchaHtml(null, null));
+        			%>
+        			<br><input type="submit" onClick = "return validate();" value="Register"/>&nbsp;&nbsp;<a href="home.html" title="home"><b>Home</b></a>
     			</form>
     			</td>
-    			</tr>
     </table>
-
-<!--		</TD>
-        <td width="10%" height="100%" border="0" cellspacing="0" cellpadding="0" valign="top">
-    		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="250" height="400" id="NewsScroller" align="center">
-			<param name="allowScriptAccess" value="sameDomain" />
-			<param name="movie" value="News/NewsScrollerFree.swf" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" /><embed src="News/NewsScrollerFree.swf" quality="high" wmode="transparent" bgcolor="#ffffff" width="250" height="400" name="NewsScrollerFree" valign="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-		</object>
     </td>
---></table>&nbsp;&nbsp;
    <table width="1080" align ="center" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-      <td align="center" class="copyright">©Copyright 2012 Lokmanya Nagar C.H.S Ltd., All rights reserved.<br>Site optimised for 1280x720 resolution and above.
+      <tr>&nbsp;
+      <td align="center" class="copyright">&copy;Copyright 2012 The Lokmanya Co-Operative Housing Society Ltd., All rights reserved.<br>Site optimised for Internet Explorer 7+ at 1280x720 resolution and above.
 	</td>
       </tr>
      </table>
