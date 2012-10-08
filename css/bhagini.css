@@ -4,10 +4,17 @@
 @charset "utf-8";
 /* CSS Document */
 
+#position{
+	margin-left:auto;
+	margin-right:auto;
+}
 .textheader{
 	font: bold 15px Arial, Helvetica, sans-serif;
-	padding:0 0 0 225px;
-	color:#000000;
+	position: absolute;
+	top: 815px;
+	left: 533px;
+	height: 148px;
+	width: 195px;
 }
 .textheader01{
 	font: bold 13px Arial, Helvetica, sans-serif;
@@ -118,7 +125,7 @@
 #padding10{	
 	position: absolute;
 	top: 1245px;
-	left: 325px;
+	left: 315px;
 	height: 57px;
 	width: 595px;
 }
