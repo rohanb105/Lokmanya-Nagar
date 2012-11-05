@@ -60,15 +60,16 @@ $(".newsticker-jcarousellite").jCarouselLite({
 });
 
 */
-// <![CDATA[
+//<![CDATA[
+function sdmenu() {	
+	var SDMenu;
+	window.onload = function() {
+	myMenu = new SDMenu("my_menu");
+	myMenu.init();
+	}
+}
 
-var SDMenu;
-window.onload = function() {
-myMenu = new SDMenu("my_menu");
-myMenu.init();
-};
-
-// ]]>
+//]]>
 
 //$(document).ready(function(){
 //$('#vscroller').vscroller({newsfeed:'news/news.xml', speed:1000,stay:2000,cache:false});

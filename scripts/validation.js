@@ -33,6 +33,39 @@ function validate() {
      }
 
 }
+// Validation for Feedback form start
+
+function validatefeedback() {
+	var elem = document.getElementById('frmfeedback').elements;
+     for(var i = 0; i < elem.length; i++)
+     { 
+         if (elem[i].value == "") {
+        	 alert(elem[i].name + " is mandatory..");
+        	 elem[i].select();
+			 elem[i].focus();
+             return false;
+         
+			 if (!feedbackemail()){
+				return false;
+			 }
+		} 
+	}   
+}
+
+function feedbackemail() {
+	 var f_email = document.getElementById("email");
+				 var feed = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+				 	if (feed.test(f_email.value) == false) 
+					{
+						alert('Invalid Email Address');
+						f_email.select();
+						f_email.focus();
+						return false;
+					}
+				 return true;	 
+}
+
+// Validation for Feedback form ends
 
 function validateEmail() {
 	var email = document.getElementById("email");
