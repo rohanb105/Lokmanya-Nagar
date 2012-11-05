@@ -19,8 +19,8 @@ body {
 	float:left;
 	display:block;
 	width:178px;
-	background:#7E1500;
-	/*background-image: url(menu_1.jpg);*/
+	background:#7E1500 ;
+	/*background-image: url(../images/menu_image.jpg;*/
 	position:relative;
 	z-index:500;
 	margin:0 1px;
