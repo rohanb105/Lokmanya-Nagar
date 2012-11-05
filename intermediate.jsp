@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="xml.css" type="text/css" rel="stylesheet" />
-<title>Insert title here</title>
+<title>The Lokmanya Co-Operative Housing Society Ltd.</title>
 <script>
 function delayer(){
     window.location = "index.html";
@@ -14,7 +14,7 @@ function delayer(){
 		String index = request.getParameter("index");
 	System.out.println("Index:- " + index);
 	%>
-	window.open("NewsServlet.do?index=" + <%=index%>, "_blank", "fullscreen=no, width=800,height=800,resizable=no,menubar='no',status='no'");
+	window.open("NewsServlet.do?index=" + <%=index%>, "_blank", "fullscreen=no, width=950,height=750,resizable=no,menubar=no,status=no");
 </script>
 </head>
 <body  onLoad="setTimeout('delayer()', 500)">

@@ -4,42 +4,52 @@
 	<Item>
 		<Title>Gokulashtami </Title>
 		<Date>August 12th, 2012</Date>
-		<Details>Lokmanya Mandal is organising Gokulashtami on Sunday 12th August for everybody's convinience and maximum participation.</Details>	
+		<Details>Lokmanya Mandal had organised Gokulashtami on Sunday 12th August for everybody's convinience and maximum participation.</Details>	
 		<link>intermediate.jsp?index=1</link>
 		<content>Lokmanya Mandal had organised Gokulashtami on Sunday 12th August 2012. 
 		The reponse for average as always, but everybody turned out to feast on "Dahikala".</content>
 		<index>1</index>
 	</Item>		
 	<Item>
-		<Title>Independence Day Celebrations  </Title>
-		<Date>August 15th, 2012</Date>		
-		<Details>As usual Independence Day will be celebrated with  a flag hoisting ceremony followed by coffee and snacks</Details>		
+		<Title>Bhagini Mandal's 60th Anniversary </Title>
+		<Date>December 1st, 2012</Date>		
+		<Details>To celebrate 60th Annniversary of Lokmanya Bhagini Mandal, the mandal on behalf of all members proposes to conduct ....</Details>		
 		<link>intermediate.jsp?index=2</link>
-		<content>This is inside content2</content>
+		<content>To celebrate 60th Annniversary of Lokmanya Bhagini Mandal, the mandal on behalf of all members proposes to conduct "Mahervashini - Sasurvashini" melava on 1st December 2012.
+					This is a paid event (approximate contribution is Rupees. 400 per person). For more details, contact:-
+						Mrs. Sushama Joshi - 9769362601
+						Mrs. Sharwani Kane - 9820218208
+						Mrs. Shadhana Bhagwat - 9833448825					
+					All Mahervashini's and Sasurvashini's are cordially invited.... Lets have a day of fun, remembrances and lets relive old memories....
+					</content>
 		<index>2</index>
 	</Item>		
 	<Item>
 		<Title>I building Lift</Title>
-		<Date>August 15th, 2012</Date>
-		<Details>Much awaited I building lift is ready and awaiting its inaugration</Details>	
+		<Date>October 24th, 2012</Date>
+		<Details>Hurray...!!! Much awaited I building lift was inaugurated on Wednesday, 24th Oct 2012</Details>	
 		<link>intermediate.jsp?index=3</link>
-		<content>This is inside content3</content>
+		<content>Much awaited I building lift which is already up and running, was officially inaugurated on Wednesday, 24th October 2012.
+				Inauguration was done by our society's President Mr. Mr. Purshottam Namjoshi.
+				This is a Hydraulic lift with a capacity of 3-4 people, its one of the most unique project undertaken by our society.
+				The Society will always remain thankful to Mr. Prakash Kanitkar, Dr. Kamlakar Dandekar and everybody else for their efforts to achieve something
+				which was once considered as a risk.</content>
 		<index>3</index>
 	</Item>		
 	<Item>
-		<Title>New Managing Committe</Title>	
-		<Date>August 15th, 2012</Date>		
-		<Details>New Managing Committe has been elected with some fresh faces and ideas</Details>
+		<Title>Dasera Pooja</Title>	
+		<Date>October 24th, 2012</Date>		
+		<Details>Lokmanya Mandal had organised Dasera Pooja on 24th October 2012</Details>
 		<link>intermediate.jsp?index=4</link>
-		<content>This is inside content4</content>
+		<content>Lokmanya Mandal had organised Dasera Pooja on 24th October 2012. This year's Dasera pooja was performed by Mr. Ashwin and Mrs. Shradha Joglekar</content>
 		<index>4</index>
-	</Item>	
+	</Item>
 	<Item>
 		<Title>Ganeshotsav</Title>	
 		<Date>September 19th, 2012</Date>		
-		<Details>Ganpati Bappa Moraya..</Details>
+		<Details>Ganpati Bappa Moraya.. All are requested to mail all the photos related to Ganeshotsav</Details>
 		<link>intermediate.jsp?index=5</link>
-		<content>This is inside content5</content>
+		<content>All members are requested to mail all photos of this years Ganeshotsav on 'admin@lokmanyanagar.com'. These photos will be published on our society website.</content>
 		<index>5</index>
 	</Item>
 </News> 

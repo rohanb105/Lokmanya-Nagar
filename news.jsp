@@ -30,7 +30,22 @@
 	<table width="100%" align="center" border="0">
 		<tr>
 			<td align="center" valign="top" width="10%"  cellspacing="3" cellpadding="0">
-				<img src='images/Sthapana.jpg' border=0 />
+				<div>
+                    <img src='images/sthapana.jpg' border=0>  
+                </div>
+                <div>   
+                   <script type="text/javascript"><!--
+                        google_ad_client = "ca-pub-6815044779788538";
+                        /* OtherPages */
+                        google_ad_slot = "0989958156";
+                        google_ad_width = 200;
+                        google_ad_height = 200;
+                        //-->
+                    </script>
+                    <script type="text/javascript"
+                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>          
+                </div>
 			</td>
 			<td width="90%" valign="top">
 				<% 
@@ -38,10 +53,10 @@
 					String title = (String) request.getAttribute("title");;
 					String content = (String) request.getAttribute("content");
                 %>
-                <p class = "header" align="justify">Title : <b><%= title %></b></p><br>
+                <p><font face="Arial, Geneva, sans-serif" size="5"><b>Title :</b></font> <b><font face="Arial, Geneva, sans-serif" size="5"><%= title %></font></b></p><br>
                 <% 
                 if (content != null) {%>
-                    <p class="text" align="justify">Content : <%= content %></p>
+                    <p><font face="Arial, Geneva, sans-serif" size="4"><b>Content :</b></font> <font face="Arial, Geneva, sans-serif" size="3"><%= content %></font></p>
                 <% }
                 %>
 			</td>
@@ -51,7 +66,7 @@
 	<table width="100%" align="center" border="0" cellspacing="0"
 		cellpadding="0">
 		<tr>
-			<td align="center" class="copyright">©Copyright 2012 The Lokmanya Co-Operative Housing Society Ltd., All rights reserved.<br>Site optimised for Internet Explorer 7+ at 1280x720 resolution and above.
+			<td align="center" class="copyright"><font face="Arial, Geneva, sans-serif" size="-3">©Copyright 2012 The Lokmanya Co-Operative Housing Society Ltd., All rights reserved.<br>Site optimised for Internet Explorer 7+ at 1280x720 resolution and above.</font>
 			</td>
 		</tr>
 	</table>

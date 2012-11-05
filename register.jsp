@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@page import="java.io.PrintWriter"%>
 <%@ page import="net.tanesha.recaptcha.*" %>
+<%@page import="com.lokmanyanagar.util.LokmanyaConstants"%>
 <%@ page import="net.tanesha.recaptcha.ReCaptchaFactory" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,6 +15,11 @@
 <!--<LINK href="newsStyleSheet.css" type=text/css rel=stylesheet>-->
 </head>
 <body>
+<script>
+function resetForm(){
+   document.getElementById("frmMain").reset();
+ } 
+</script>
 	<table align ="center">
         <tr>
         	<td border="0" cellspacing="0" cellpadding="0" bgcolor="#6E0000">	
@@ -44,7 +50,7 @@
         <ul>
             	<li><a href="mngcommittee.html" title="Managing Committee">Managing Committee</a></li>
             	<li><a href="lokmanyamandal.html" title="Lokmanya Mandal">Lokmanya Mandal</a></li>
-            	<li><a href="bhaginimandal.html" title="Bhagini Mandal">Bhagini Mandal</a></li>
+            	<li><a href="bhaginimandal.html" title="Lokmanya Bhagini Mandal">Lokmanya Bhagini Mandal</a></li>
         	</ul>
             <div class="clear"></div>
         </li>
@@ -73,7 +79,22 @@
 </table>
 <table width="1080" align ="center" border="0" cellspacing="2" cellpadding="0">
     <td align="center" valign="top" width="10%" >
-       <img src='images/Sthapana.jpg' border=0>               
+       <div>
+            <img src='images/sthapana.jpg' border=0>  
+        </div>
+        <div>   
+           <script type="text/javascript"><!--
+                google_ad_client = "ca-pub-6815044779788538";
+                /* OtherPages */
+                google_ad_slot = "0989958156";
+                google_ad_width = 200;
+                google_ad_height = 200;
+                //-->
+            </script>
+            <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>          
+        </div>                    
     </td>
 	<td width = "80%" valign="top">
     	<table width="100%" cellspacing="3" cellpadding="0">
@@ -88,7 +109,7 @@
 							%>
 							<h2>Registration Successful!</h2>
 						<% } else {
-							if ((String) request.getParameter("captcha") != null) {%>
+							if ((String) request.getParameter("captcha") != null && ((String) request.getParameter("captcha")).equals("false")) {%>
 								<h2>Invalid Captcha..Please enter correct captcha values!</h2>
 							<% } else {%>
 								<h2>There is some problem with registration.Please try again!</h2>
@@ -126,6 +147,21 @@
     					<td class="username" align="left"><label for="cnfpassword">Confirm Password <abbr class="req" title="required">*</abbr>:</label> </td>
     					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "password" name="Confirm Password" id = "confirmPassword"/></td>
    					</tr>
+                    <tr>
+    					<td class="username" align="left"><label for="bloodgrp">Blood Group <abbr class="req" title="required">*</abbr>:</label> </td>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select  id="bloodgrp" name="Blood Group">
+                        <option value="Select" selected="selected">Select</option>
+                        <option value="A +">A +</option>
+                        <option value="A -">A -</option>
+                        <option value="B +">B +</option>
+                        <option value="B -">B -</option>
+                        <option value="AB +">AB +</option>
+                        <option value="AB -">AB -</option>
+                        <option value="O +">O +</option>
+                        <option value="O -">O -</option>
+                        </select>
+                        </td>
+    				</tr>
     				<tr>
     					<td class="username" align="left"><label for="address">Address <abbr class="req" title="required">*</abbr>:</label> </td>
    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="5" cols="16" name="Address" id="address"></textarea></td>
@@ -140,10 +176,10 @@
     				</tr>
     			</table>
     				<%
-         				ReCaptcha c = ReCaptchaFactory.newReCaptcha("6LfYndYSAAAAAOXdVq2RzqT06gXOlEsqfK_gnsNV", "6LfYndYSAAAAAON5osggHtDW5mwVOH0YCSrrwOgF", false);
-          				out.print(c.createRecaptchaHtml(null, null));
-        			%>
-        			<br><input type="submit" onClick = "return validate();" value="Register"/>&nbsp;&nbsp;<a href="home.html" title="home"><b>Home</b></a>
+							ReCaptcha c = ReCaptchaFactory.newReCaptcha(LokmanyaConstants.CAPTCHA_PUBLIC_KEY, LokmanyaConstants.CAPTCHA_PRIVATE_KEY, false);
+							out.print(c.createRecaptchaHtml(null, null));
+					%>
+        			<br><input type="submit" onClick = "return validate();" value="Register"/>&nbsp;&nbsp;<input type="button" onClick = "return resetForm();" value="Reset"/>
     			</form>
     			</td>
     </table>
