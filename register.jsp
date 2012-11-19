@@ -81,19 +81,19 @@ function resetForm(){
     <td align="center" valign="top" width="10%" >
        <div>
             <img src='images/sthapana.jpg' border=0>  
-        </div>
-        <div>   
-           <script type="text/javascript"><!--
-                google_ad_client = "ca-pub-6815044779788538";
-                /* OtherPages */
-                google_ad_slot = "0989958156";
-                google_ad_width = 200;
-                google_ad_height = 200;
-                //-->
-            </script>
-            <script type="text/javascript"
-                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>          
+        </div>&nbsp;
+        <div align="center">   
+            <script type="text/javascript"><!--
+				google_ad_client = "ca-pub-0383924121947206";
+				/* Square_Image */
+				google_ad_slot = "8196961038";
+				google_ad_width = 200;
+				google_ad_height = 200;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>          
         </div>                    
     </td>
 	<td width = "80%" valign="top">
