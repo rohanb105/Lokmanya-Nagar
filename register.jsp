@@ -81,20 +81,26 @@ function resetForm(){
     <td align="center" valign="top" width="10%" >
        <div>
             <img src='images/sthapana.jpg' border=0>  
-        </div>&nbsp;
-        <div align="center">   
-            <script type="text/javascript"><!--
-				google_ad_client = "ca-pub-0383924121947206";
-				/* Square_Image */
-				google_ad_slot = "8196961038";
-				google_ad_width = 200;
-				google_ad_height = 200;
-				//-->
-				</script>
-				<script type="text/javascript"
-				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>          
-        </div>                    
+       </div> 
+        <div align="center">
+			<script type="text/javascript">
+			//interstitial ad
+			clicksor_enable_inter = true; clicksor_maxad = -1;	 
+			clicksor_hourcap = -1; clicksor_showcap = 10;
+            //default banner house ad url 
+            clicksor_default_url = '';
+            clicksor_banner_border = ''; clicksor_banner_ad_bg = '';
+            clicksor_banner_link_color = ''; clicksor_banner_text_color = '';
+            clicksor_banner_text_banner = false; clicksor_banner_image_banner = true;
+            clicksor_layer_border_color = '';
+            clicksor_layer_ad_bg = ''; clicksor_layer_ad_link_color = '';
+            clicksor_layer_ad_text_color = ''; clicksor_text_link_bg = '';
+            clicksor_text_link_color = ''; clicksor_enable_text_link = false;
+            clicksor_layer_banner = false;
+            </script>
+            <script type="text/javascript" src="http://ads.clicksor.com/newServing/showAd.php?nid=1&amp;pid=287381&amp;adtype=6&amp;sid=469279"></script>
+            <noscript><a href="http://www.yesadvertising.com">affiliate marketing</a></noscript>
+        </div>                  
     </td>
 	<td width = "80%" valign="top">
     	<table width="100%" cellspacing="3" cellpadding="0">
@@ -180,7 +186,26 @@ function resetForm(){
 							out.print(c.createRecaptchaHtml(null, null));
 					%>
         			<br><input type="submit" onClick = "return validate();" value="Register"/>&nbsp;&nbsp;<input type="button" onClick = "return resetForm();" value="Reset"/>
-    			</form>
+    			</form>&nbsp;
+                <div align="center">
+					<script type="text/javascript">
+					//interstitial ad
+					clicksor_enable_inter = true; clicksor_maxad = -1;	 
+					clicksor_hourcap = -1; clicksor_showcap = 10;
+                    //default banner house ad url 
+                    clicksor_default_url = '';
+                    clicksor_banner_border = ''; clicksor_banner_ad_bg = '';
+                    clicksor_banner_link_color = ''; clicksor_banner_text_color = '';
+                    clicksor_banner_text_banner = false; clicksor_banner_image_banner = true;
+                    clicksor_layer_border_color = '';
+                    clicksor_layer_ad_bg = ''; clicksor_layer_ad_link_color = '';
+                    clicksor_layer_ad_text_color = ''; clicksor_text_link_bg = '';
+                    clicksor_text_link_color = ''; clicksor_enable_text_link = false;
+                    clicksor_layer_banner = false;
+                    </script>
+                    <script type="text/javascript" src="http://ads.clicksor.com/newServing/showAd.php?nid=1&amp;pid=287381&amp;adtype=2&amp;sid=469279"></script>
+                    <noscript><a href="http://www.yesadvertising.com">affiliate marketing</a></noscript>
+                </div>
     			</td>
     </table>
     </td>
