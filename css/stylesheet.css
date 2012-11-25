@@ -28,8 +28,8 @@ inherit{
 	background:inherit;
 }
 .header{
-	font: bold 22px/24px Arial, Helvetica, sans-serif;
-	padding:19px 10px 10px 10px;
+	font: bold 22px Arial, Helvetica, sans-serif;
+	padding:15px 10px 10px 10px;
 	color:#000000;
 }
 .subheader{
