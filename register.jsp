@@ -81,25 +81,30 @@ function resetForm(){
     <td align="center" valign="top" width="10%" >
        <div>
             <img src='images/sthapana.jpg' border=0>  
-       </div> 
+       </div>&nbsp;
         <div align="center">
 			<script type="text/javascript">
-			//interstitial ad
-			clicksor_enable_inter = true; clicksor_maxad = -1;	 
-			clicksor_hourcap = -1; clicksor_showcap = 10;
-            //default banner house ad url 
-            clicksor_default_url = '';
-            clicksor_banner_border = ''; clicksor_banner_ad_bg = '';
-            clicksor_banner_link_color = ''; clicksor_banner_text_color = '';
-            clicksor_banner_text_banner = false; clicksor_banner_image_banner = true;
-            clicksor_layer_border_color = '';
-            clicksor_layer_ad_bg = ''; clicksor_layer_ad_link_color = '';
-            clicksor_layer_ad_text_color = ''; clicksor_text_link_bg = '';
-            clicksor_text_link_color = ''; clicksor_enable_text_link = false;
-            clicksor_layer_banner = false;
-            </script>
-            <script type="text/javascript" src="http://ads.clicksor.com/newServing/showAd.php?nid=1&amp;pid=287381&amp;adtype=6&amp;sid=469279"></script>
-            <noscript><a href="http://www.yesadvertising.com">affiliate marketing</a></noscript>
+				sa_client = "34204971a227d60088494b09790e8761";
+				sa_code = "43631e0b0b625570e2c30442a81f9cf4";
+				sa_protocol = ("https:"==document.location.protocol)?"https":"http";
+				sa_pline = "0";
+				sa_maxads = "1";
+				sa_bgcolor = "FFFFFF";
+				sa_bordercolor = "DDDDFF";
+				sa_superbordercolor = "DDDDFF";
+				sa_linkcolor = "000080";
+				sa_desccolor = "000000";
+				sa_urlcolor = "008000";
+				sa_b = "1";
+				sa_format = "rect_180x150";
+				sa_width = "180";
+				sa_height = "150";
+				sa_location = "0";
+				sa_radius = "0";
+				sa_borderwidth = "1";
+				sa_font = "0";
+				document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+"://sa.entireweb.com/sense.js'%3e%3c/script%3e"));
+				</script>
         </div>                  
     </td>
 	<td width = "80%" valign="top">
@@ -187,24 +192,11 @@ function resetForm(){
 					%>
         			<br><input type="submit" onClick = "return validate();" value="Register"/>&nbsp;&nbsp;<input type="button" onClick = "return resetForm();" value="Reset"/>
     			</form>&nbsp;
+                <div>
+                	<script type='text/javascript' src='http://www.mmadsgadget.com/t?id=0a056842-f99f-f624-45a1-21e773da7e4c&size=Pop-under'></script>
+                </div>
                 <div align="center">
-					<script type="text/javascript">
-					//interstitial ad
-					clicksor_enable_inter = true; clicksor_maxad = -1;	 
-					clicksor_hourcap = -1; clicksor_showcap = 10;
-                    //default banner house ad url 
-                    clicksor_default_url = '';
-                    clicksor_banner_border = ''; clicksor_banner_ad_bg = '';
-                    clicksor_banner_link_color = ''; clicksor_banner_text_color = '';
-                    clicksor_banner_text_banner = false; clicksor_banner_image_banner = true;
-                    clicksor_layer_border_color = '';
-                    clicksor_layer_ad_bg = ''; clicksor_layer_ad_link_color = '';
-                    clicksor_layer_ad_text_color = ''; clicksor_text_link_bg = '';
-                    clicksor_text_link_color = ''; clicksor_enable_text_link = false;
-                    clicksor_layer_banner = false;
-                    </script>
-                    <script type="text/javascript" src="http://ads.clicksor.com/newServing/showAd.php?nid=1&amp;pid=287381&amp;adtype=2&amp;sid=469279"></script>
-                    <noscript><a href="http://www.yesadvertising.com">affiliate marketing</a></noscript>
+					<script type='text/javascript' src='http://www.mmadsgadget.com/t?id=b0d2eca6-7391-ed64-0562-5fe16c03ee9c&size=468x60'></script>
                 </div>
     			</td>
     </table>

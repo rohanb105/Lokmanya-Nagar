@@ -17,13 +17,14 @@ $(document).ready(function () {
 
 
 //<![CDATA[
-function sdmenu() {	
+//function SDMenu() {	
 	var SDMenu;
 	window.onload = function() {
 	myMenu = new SDMenu("my_menu");
 	myMenu.init();
 	}
-}
+//}
 
 //]]>
 
+setInterval(jQuery('.blinking').toggle, 1500 );
