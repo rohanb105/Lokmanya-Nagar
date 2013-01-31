@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Lokmanya Co-Operative Housing Society Ltd.</title>
+<link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+<!--<link href="css/jquery-ui.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery-ui-base.css" type="text/css" rel="stylesheet" />
+<SCRIPT language=JavaScript src="scripts/jquery-1.10.0-datepicker.js" type=text/javascript></SCRIPT>
+<SCRIPT language=JavaScript src="scripts/jquery-1.9.0.js" type=text/javascript></SCRIPT>-->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+<script>
+	$(function() {
+	$( "#datepicker" ).datepicker({ minDate: -0, maxDate: "+12M +0D" });
+	});
+</script>
+</head>
+<body>
+<center>
+<div>
+<!--<table align="center">-->
+   <!--<td width = "80%" align="center">-->
+    <div>
+        <h1 class="logintext">Lokmanya Nagar Sabhagriha</h1>
+        <h2 class="logintext">Full day Booking</h2>
+        <p class="username"> Required fields are marked with an asterisk ( <abbr class="req" title="required">*</abbr> ).</p>
+        <!--<% 
+        String success = (String) request.getParameter("success");
+        if (success != null) {
+            if (success.equals("true")) {
+                %>
+                <h2>Registration Successful!</h2>
+            <% } else {
+                if ((String) request.getParameter("captcha") != null && ((String) request.getParameter("captcha")).equals("false")) {%>
+                    <h2>Invalid Captcha..Please enter correct captcha values!</h2>
+                <% } else {%>
+                    <h2>There is some problem with registration.Please try again!</h2>
+            <% }
+            }
+        }
+        %>-->
+    </div>
+    <div>
+    <!--<form action="LoginServlet.do" method="post" id = "frmMain">-->
+    
+        <div style="float:left;width:90px;border:1px solid #000;" class="username"><label class="username" for="firstname">First Name <abbr class="req" title="required">*</abbr>:</label> </div>
+        <div style="float:left;width:170px;border:1px solid #000;"><input type = "text" name="First Name" id="firstName"/></div>
+        <div style="float:left;width:100px;border:1px solid #000;" class="username"><label class="username" for="middlename">Middle Name <abbr class="req" title="required">*</abbr>:</label></div>
+        <div style="float:left;width:170px;border:1px solid #000;"><input type = "text" name="Middle Name" id = "middleName"/></div>
+        <div style="float:left;width:90px;border:1px solid #000;" class="username"><label class="username" for="lastname">Last Name <abbr class="req" title="required">*</abbr>:</label></div>
+        <div style="float:left;width:170px;border:1px solid #000;"><input type = "text" name="Last Name" id = "lastName"/></div>
+   
+     	<div style="float:left;width:800px;height:30px;border:1px solid #000;" >&nbsp;</div>
+        <div style="float:left;width:80px;border:1px solid #000;" class="username"><label class="username" for="emailId">Email Id <abbr class="req" title="required">*</abbr>:</label></div>
+        <div style="float:left;width:170px;border:1px solid #000;"><input type = "text" name="Email Id" id="email" /></div>
+        <div style="float:left;width:120px;border:1px solid #000;" class="username"><label class="username" for="cnfEmailId">Confirm Email Id <abbr class="req" title="required">*</abbr>:</label> </div>
+        <div style="float:left;width:170px;border:1px solid #000;"><input type = "text" name="Comfirm Email Id" id="confirmemail"/></div>
+        <div style="float:left;width:252px;border:1px solid #000;" >&nbsp;</div>
+        <div style="float:left;width:800px;height:30px;border:1px solid #000;" >&nbsp;</div>
+        <!--<div style="float:left;width:80px;height:30px;border:1px solid #000;" >&nbsp;</div>-->
+    	<div style="float:left;width:80px;border:1px solid #000;" class="username"><label for="address">Address <abbr class="req" title="required">*</abbr>:</label> </div>
+        <div style="float:left;width:280px;height:80px;border:1px solid #000;" class="username"><textarea rows="4" cols="30" name="Address" id="address"></textarea></div>
+        <div style="float:left;width:110px;border:1px solid #000;" class="username"><label for="firstname">Booking Date <abbr class="req" title="required">*</abbr>:</label></div>
+        
+        <div style="float:left;width:170px;border:1px solid #000;" class="username"><input type="text" id="datepicker" /></div>
+        <div style="float:left;width:152px;border:1px solid #000;" >&nbsp;</div>
+        <div style="float:left;width:800px;border:1px solid #000;" >&nbsp;</div>
+        <div style="float:left;width:90px;border:1px solid #000;" class="username"><label for="firstname">Mobile No <abbr class="req" title="required">*</abbr>:</label></div>
+        <div style="float:left;width:170px;border:1px solid #000;"><input type = "text" name="Mobile No" id="mobNo"/></div>
+        <div style="float:left;width:536px;border:1px solid #000;" >&nbsp;</div>
+        <div style="float:left;width:800px;height:80px;border:1px solid #000;" >&nbsp;</div>
+</div>
+</div>
+</center>
+<table height="15">&nbsp;</table>
+<!--<table>    
+    <tr>
+    	<div>
+			<script type='text/javascript' src='http://www.mmadsgadget.com/t?id=376a3c5b-ef9a-9064-55cd-80bcce6ddfcc&size=728x90'></script>
+        </div>
+    </tr>
+</table>&nbsp;-->
+<table align="center">
+    <td  align ="center" class="copyright" cellspacing="3">&copy;Copyright 2012 The Lokmanya Co-Operative Housing Society Ltd., All rights reserved.
+            <br>Site optimised for Internet Explorer 8+ at 1280x720 resolution and above.
+    </td>
+</table>
+</body>
+</html>
