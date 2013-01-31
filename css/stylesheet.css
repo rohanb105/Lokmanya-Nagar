@@ -189,4 +189,10 @@ padding:0 9px 5px 9px;
 	width: 195px;
 }
 
-
+/*------------ For Hall booking ----------*/
+.bookingform{
+	font:normal 13px/25px Arial, Helvetica, sans-serif;
+	/*width: 25px;*/
+	color:#333;
+	background-color:inherit;
+	}
