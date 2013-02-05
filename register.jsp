@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@page import="com.lokmanyanagar.model.Registration"%>
+<%@page import="com.lokmanyanagar.util.LokmanyaConstants"%>
 <%@page import="java.io.PrintWriter"%>
 <%@ page import="net.tanesha.recaptcha.*" %>
-<%@page import="com.lokmanyanagar.util.LokmanyaConstants"%>
 <%@ page import="net.tanesha.recaptcha.ReCaptchaFactory" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -114,13 +115,23 @@ function resetForm(){
     			<h1 class="logintext">Register Member</h1>
     			<p> Required fields are marked with an asterisk ( <abbr class="req" title="required">*</abbr> ).</p>
     			<% 
-					String success = (String) request.getParameter("success");
+					//String success = (String) request.getParameter("success");
+    				String success = (String) request.getAttribute("success");
+    				String captcha = (String) request.getAttribute("captcha");
+					String captcha = (String) request.getAttribute("email");
+    				boolean isUserAvaliable = false;
+    				Registration userModel = (Registration) request.getAttribute("userModel");
+    				if (userModel != null)
+    				{
+    					isUserAvaliable = true;
+    				}
 					if (success != null) {
 						if (success.equals("true")) {
 							%>
 							<h2>Registration Successful!</h2>
 						<% } else {
-							if ((String) request.getParameter("captcha") != null && ((String) request.getParameter("captcha")).equals("false")) {%>
+							/* if ((String) request.getParameter("captcha") != null && ((String) request.getParameter("captcha")).equals("false")) { */
+							if(captcha != null && captcha.equals("false")) {%>
 								<h2>Invalid Captcha..Please enter correct captcha values!</h2>
 							<% } else {%>
 								<h2>There is some problem with registration.Please try again!</h2>
@@ -132,23 +143,23 @@ function resetForm(){
     			<table>
     				<tr>
     					<td class="username" align="left"><label for="firstname">First Name <abbr class="req" title="required">*</abbr>:</label> </td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="First Name" id="firstName"/></td>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="First Name" id="firstName" value = <% String fname = isUserAvaliable?userModel.getFirstName():""; %> <%=fname %> ></td>
     				</tr>
     				<tr>
     					<td class="username" align="left">Middle Name :</td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Middle Name" id = "middleName"/></td>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Middle Name" id = "middleName"  value = <% String mname = isUserAvaliable?userModel.getMiddleName():""; %> <%=mname %> ></td>
     				</tr>
     				<tr>
     					<td class="username" align="left"><label for="lastname">Last Name <abbr class="req" title="required">*</abbr>:</label> </td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Last Name" id = "lastName"/></td>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Last Name" id = "lastName"   value = <% String lname = isUserAvaliable?userModel.getLastName():""; %> <%=lname %> ></td>
     				</tr>
     				<tr>
     					<td class="username" align="left"><label for="emailId">Email Id <abbr class="req" title="required">*</abbr>:</label> </td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Email Id" id="email" /></td>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Email Id" id="email"   value = <% String email = isUserAvaliable?userModel.getEmail():""; %> <%=email %> ></td>
     				</tr>
                     <tr>
     					<td class="username" align="left"><label for="cnfEmailId">Confirm Email Id <abbr class="req" title="required">*</abbr>:</label> </td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Comfirm Email Id" id="confirmemail"/></td>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Comfirm Email Id" id="confirmemail" value = <% String cnfEmail = isUserAvaliable?userModel.getEmail():""; %> <%=cnfEmail %> ></td>
     				</tr>
     				<tr>
     					<td class="username" align="left"><label for="password">Password <abbr class="req" title="required">*</abbr>:</label> </td>
@@ -160,30 +171,31 @@ function resetForm(){
    					</tr>
                     <tr>
     					<td class="username" align="left"><label for="bloodgrp">Blood Group <abbr class="req" title="required">*</abbr>:</label> </td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select  id="bloodgrp" name="Blood Group">
-                        <option value="Select" selected="selected">Select</option>
-                        <option value="A +">A +</option>
-                        <option value="A -">A -</option>
-                        <option value="B +">B +</option>
-                        <option value="B -">B -</option>
-                        <option value="AB +">AB +</option>
-                        <option value="AB -">AB -</option>
-                        <option value="O +">O +</option>
-                        <option value="O -">O -</option>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select  id="bloodgrp" name="Blood Group">
+                            <option value="Select" selected="selected">Select</option>
+                            <option value="A +">A +</option>
+                            <option value="A -">A -</option>
+                            <option value="B +">B +</option>
+                            <option value="B -">B -</option>
+                            <option value="AB +">AB +</option>
+                            <option value="AB -">AB -</option>
+                            <option value="O +">O +</option>
+                            <option value="O -">O -</option>
                         </select>
                         </td>
     				</tr>
     				<tr>
     					<td class="username" align="left"><label for="address">Address <abbr class="req" title="required">*</abbr>:</label> </td>
-   					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="5" cols="16" name="Address" id="address"></textarea></td>
+   					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="5" cols="16" name="Address" id="address"><%String addr=isUserAvaliable?userModel.getAddress():""; %><%=addr%></textarea></td>
     				</tr>
     				<tr>
     					<td class="username" align="left">Telephone No : </td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Telephone No" id="telNo"/></td>
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Telephone No" id="telNo"   value = <% long telNo = isUserAvaliable?userModel.getTelNo():0; %> <%=telNo %> ></td>
     				</tr>
     				<tr>
     					<td class="username" align="left"><label for="firstname">Mobile No <abbr class="req" title="required">*</abbr>:</label> </td>
-    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Mobile No" id="mobNo"/></td> &nbsp;&nbsp;&nbsp;&nbsp;
+    					<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name="Mobile No" id="mobNo"   value = <% long mobNo = isUserAvaliable?userModel.getMobNo():0; %> <%=mobNo %> ></td> &nbsp;&nbsp;&nbsp;&nbsp;
     				</tr>
     			</table>
     				<%
@@ -203,8 +215,7 @@ function resetForm(){
     </td>
    <table width="1080" align ="center" border="0" cellspacing="0" cellpadding="0">
       <tr>&nbsp;
-      <td align="center" class="copyright">&copy;Copyright 2012 The Lokmanya Co-Operative Housing Society Ltd., All rights reserved.<br>Site optimised for Internet Explorer 7+ at 1280x720 resolution and above.
-	</td>
+      <td align="center" class="copyright">&copy;Copyright 2012 The Lokmanya Co-Operative Housing Society Ltd., All rights reserved.</td>
       </tr>
      </table>
 </table>
